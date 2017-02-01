@@ -1,7 +1,7 @@
 var http = require('http')
 var exec = require('exec')
 
-const PORT = 18340
+const PORT = 9988
 const REPO_URL = 'https://github.com/TeamGhostBuster/server.git'
 const REPO_NAME = 'server'
 
