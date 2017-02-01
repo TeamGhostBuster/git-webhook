@@ -8,6 +8,7 @@ const REPO_NAME = 'server'
 var deployServer = http.createServer(function (request, response) {
   if (request.url.search(/deploy\/?$/i) > 0) {
     var commands = [
+      'rm -rf ' + REPO_NAME,
       'git clone --no-local ' + REPO_URL,
       'cd ' + REPO_NAME,
       'forever start -c python3 run.py'
