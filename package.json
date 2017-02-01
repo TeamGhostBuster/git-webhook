@@ -1,0 +1,10 @@
+{
+  "name": "git-webhook",
+  "version": "1.0.0",
+  "main": "app.js",
+  "license": "MIT",
+  "dependencies": {
+    "exec": "^0.2.1",
+    "http": "^0.0.0"
+  }
+}
