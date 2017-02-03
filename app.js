@@ -15,7 +15,7 @@ var commands = [
 ].join(' && ')
 
 // deployServer.listen(PORT)
-app.get('/deploy', function (req, res) {
+app.post('/deploy', function (req, res) {
   exec(commands, function (err, out, code) {
     if (err instanceof Error) {
       res.status(500).send('Server Internal Error')
