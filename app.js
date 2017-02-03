@@ -11,6 +11,7 @@ var deployServer = http.createServer(function (request, response) {
       'rm -rf ' + REPO_NAME,
       'git clone --no-local ' + REPO_URL,
       'cd ' + REPO_NAME,
+      'python3 setup.py install --user --prefix=',
       'forever start -c python3 run.py'
     ].join(' && ')
 
