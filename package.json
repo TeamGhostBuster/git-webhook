@@ -4,8 +4,10 @@
   "main": "app.js",
   "license": "MIT",
   "dependencies": {
+    "body-parser": "^1.16.0",
     "exec": "^0.2.1",
     "express": "^4.14.1",
+    "express-json": "^1.0.0",
     "http": "^0.0.0"
   }
 }
