@@ -4,7 +4,7 @@ var json = require('express-json')
 var bodyParser = require('body-parser')
 
 const PORT = 9988
-const REPO_URL = 'https://github.com/TeamGhostBuster/server.git'
+const REPO_URL = 'https://github.com/TeamGhostBuster/restful-api.git'
 const REPO_NAME = 'server'
 
 var app = express()
@@ -12,15 +12,15 @@ app.use(json())
 app.use(bodyParser.json())
 
 
-app.post('/deploy', function (req, res) {
+app.post('/restful-api', function (req, res) {
   commit_sha = console.log(req.body.after)
   var commands = [
-    'rm -rf ' + REPO_NAME,
-    'git clone ' + REPO_URL,
     'cd ' + REPO_NAME,
+    'git reset --hard',
+    'git pull',
     'git config core.sparsecheckout',
     'git checkout -f ' + commit_sha,
-    'docker-compose up --force-recreate -d'
+    'docker-compose restart -d'
   ].join(' && ')
 
   exec(commands, function (err, out, code) {
