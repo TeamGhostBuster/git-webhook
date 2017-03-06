@@ -2,13 +2,13 @@
   "https://github.com/TeamGhostBuster/restful-api": {
     "secret": "whatever",
     "events": {
-      "push": "restful-api.sh"
+      "push": "/home/git/git-webhook/restful-api.sh"
     }
   },
   "https://github.com/TeamGhostBuster/CollaborativeList": {
     "secret": "raspberry",
     "events": {
-      "push": "CollaborativeList/build.sh"
+      "push": "/home/git/git-webhook/CollaborativeList/build.sh"
     }
   }
 }
