@@ -8,7 +8,7 @@
   "https://github.com/TeamGhostBuster/CollaborativeList": {
     "secret": "raspberry",
     "events": {
-      "push": "/home/git/git-webhook/CollaborativeList/build.sh"
+      "push": "/home/git/git-webhook/raspberry.sh"
     }
   }
 }
